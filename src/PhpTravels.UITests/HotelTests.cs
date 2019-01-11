@@ -7,7 +7,7 @@ namespace PhpTravels.UITests
 {
     public class HotelTests : UITestFixture
     {
-        [Test]
+        [Test, Category("Test")]
         public void Hotel_Add()
         {
             LoginAsAdmin();
@@ -25,7 +25,7 @@ namespace PhpTravels.UITests
                 Hotels.Rows[x => x.Name == name].Should.BeVisible();
         }
 
-        [Test]
+        [Test, Category("NotTest")]
         public void Hotel_Edit()
         {
             LoginAsAdmin();
